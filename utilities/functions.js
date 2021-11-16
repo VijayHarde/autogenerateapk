@@ -92,7 +92,7 @@ function generateApk(){
                 reject(err);
             }
             else{
-                resolve("Apk Generated")
+                resolve(`apk geneeated at ${process.env.apkPath}`);
             }
         })
     })
