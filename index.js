@@ -5,16 +5,19 @@ const {
   downloadimage,
   replaceicon,
   replacesplashscreen,
-  signedApk,
-  generateApk,
-  assembleGradle,
-} = require("./utilities/functions");
+} = require("./utilities/iconAndSplashScreen");
 
 const {
   readFile,
   changeDataAndUpdateFile,
   takeColors,
 } = require("./utilities/updateapptheam");
+
+const {
+  assembleGradle,
+  signedApk,
+  generateApk
+} = require("./utilities/generateApk");
 
 const questions = [
   {
@@ -79,6 +82,7 @@ function addSplashScreenAndIcon() {
       console.log(err);
     });
 }
+
 
 function generateapk() {
   assembleGradle()
